@@ -18,7 +18,7 @@ class Test_mes_set:
         self.driver.quit()
         print("结束")
 
-    @pytest.mark.paramtrize("phone,pwd",[("15938707946","19900102"),("15938707946",""),("","19900102")])
+    @pytest.mark.paramtrize("phone,pwd",[("xxxx","xxxx"),("xxxx",""),("","xxxx")])
     def test_toutiao_login_001(self,phone,pwd):
         self.All.cli_my_btn()
         self.All.cli_login_btn()
