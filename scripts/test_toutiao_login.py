@@ -17,7 +17,7 @@ class Test_mes_set:
     def teardown_class(self):
         self.driver.quit()
         print("结束")
-    #项目更新了,上传一下
+    #项目更新了,上传一下,上传
     @pytest.mark.paramtrize("phone,pwd",[("XXXXXX","XXXXXX"),("XXXXXX",""),("","XXXXXX")])
     def test_toutiao_login_001(self,phone,pwd):
         self.All.cli_my_btn()
