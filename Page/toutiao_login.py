@@ -5,7 +5,7 @@
 # @File    : toutiao_login.py
 # @Software: PyCharm
 from Base.BasePage import BasePage
-import Page
+import Page,os
 class Toutiao_Login(BasePage):
     def __init__(self,driver):
         BasePage.__init__(self, driver)
@@ -28,3 +28,16 @@ class Toutiao_Login(BasePage):
     #点击登录
     def cli_log_btn(self):
         self.click_element_base(Page.cli_login_tt)
+        # 判断是否登录成功
+        if self.if_disp(Page.usr_edit_btn):
+            #登陆成功
+            print("登录成功")
+            os.system("adb shell pm clear io.manong.developerdaily")
+            #再次打开
+            os.system("adb  shell am start -n io.manong.developerdaily/io.toutiao.android.ui.activity.MainActivity")
+        else:
+            print("登录失败")
+
+
+
+

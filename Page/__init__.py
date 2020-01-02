@@ -49,6 +49,10 @@ input_em_tt=(By.ID, "io.manong.developerdaily:id/edt_phone")
 inpwd_em_tt=(By.ID, "io.manong.developerdaily:id/edt_password")
 #点击登录
 cli_login_tt=(By.ID, "io.manong.developerdaily:id/btn_login")
+
+#判断是否登录成功,定位到是否有头像存在
+usr_edit_btn=(By.ID,"io.manong.developerdaily:id/nav_img_avatar")
+
 """
 Search_Page参数
 """

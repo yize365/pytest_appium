@@ -17,6 +17,14 @@ class BasePage:
         return WebDriverWait(self.driver, timeout, poll) \
             .until(lambda x: x.find_elements(*loc))
 
+    #判断元素是否存在,作为检查操作是否成功的函数
+    def if_disp(self,loc):
+        try:
+            self.find_element_base(loc)
+            return True
+        except Exception as e:
+            return False
+
     #点击元素
     def click_element_base(self,loc):
         self.find_element_base(loc).click()
